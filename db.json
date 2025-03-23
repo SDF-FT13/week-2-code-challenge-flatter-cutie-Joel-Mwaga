@@ -3,13 +3,13 @@
     {
       "id": 1,
       "name": "Mr. Cute",
-      "image": "https://thumbs.gfycat.com/EquatorialIckyCat-max-1mb.gif",
+      "image": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/02c27070-03b4-4dc7-8ed9-d5f14156dc46/db4uqae-b64c8566-336d-40c2-9fe9-9b6780a6c07f.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzAyYzI3MDcwLTAzYjQtNGRjNy04ZWQ5LWQ1ZjE0MTU2ZGM0NlwvZGI0dXFhZS1iNjRjODU2Ni0zMzZkLTQwYzItOWZlOS05YjY3ODBhNmMwN2YuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.s7s9bcSTkAlRrO7to0quc3tg9cu9nCbdefM8Eosug7s",
       "votes": 0
     },
     {
       "id": 2,
       "name": "Mx. Monkey",
-      "image": "https://thumbs.gfycat.com/FatalInnocentAmericanshorthair-max-1mb.gif",
+      "image": "https://static.wixstatic.com/media/5922a2_cb851b07066540dd88edbf5da10da2bc~mv2.gif",
       "votes": 0
     },
     {
@@ -28,6 +28,11 @@
       "id": 5,
       "name": "Mme. Panda",
       "image": "https://media.giphy.com/media/ALalVMOVR8Qw/giphy.gif",
+      "votes": 0
+    },
+    {
+      "id": "b4e5",
+      "image": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/3035fb76965389.5c7945b0d0567.gif",
       "votes": 0
     }
   ]

@@ -44,7 +44,7 @@ html, body {
 }
 
 input[type="submit"], button {
-  background-color: rgb(49, 109, 179);
+  background-color: rgb(101, 179, 49);
   color: white;
   font-size: 18px;
   border-radius: 6px;
@@ -58,4 +58,29 @@ input[type="text"] {
 #image{
   width: 300px;
   height: 300px;
+}
+
+/* Style for the remove button */
+button {
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Add ellipsis (...) for overflowing text */
+  padding: 5px 10px; /* Add padding for better spacing */
+  font-size: 14px; /* Adjust font size */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 5px; /* Round the corners */
+  background-color: #502424; /* Light background color */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Add hover effect for buttons */
+button:hover {
+  background-color: #e0e0e0; /* Slightly darker background on hover */
+}
+
+/* Ensure the button text doesn't overlap */
+button span {
+  display: inline-block;
+  max-width: 100%; /* Ensure the text fits within the button */
+  text-align: center;
 }
