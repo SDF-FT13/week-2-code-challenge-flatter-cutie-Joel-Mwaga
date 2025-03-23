@@ -22,7 +22,7 @@ function addCharacterToBar(character) {
 
   // Add a remove button
   const removeButton = document.createElement("button");
-  removeButton.textContent = "Remove";
+  removeButton.textContent = "❌";
   removeButton.style.marginLeft = "10px";
   removeButton.addEventListener("click", (event) => {
     event.stopPropagation(); // Prevent triggering the click event on the span
