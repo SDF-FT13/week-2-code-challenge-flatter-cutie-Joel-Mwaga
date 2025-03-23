@@ -54,18 +54,14 @@ function displayCharacterDetails(character) {
     const additionalVotes = parseInt(votesInput.value) || 0;
     character.votes += additionalVotes;
     voteCountElement.textContent = character.votes;
-    votesInput.value = ""; // Clear the input field
+    votesInput.value = ""; 
   };
-
-  // Attach event listener to the reset votes button
   const resetButton = document.getElementById("reset-button");
   resetButton.onclick = () => {
-    character.votes = 0; // Reset votes to 0
-    voteCountElement.textContent = character.votes; // Update the displayed votes
+    character.votes = 0; 
+    voteCountElement.textContent = character.votes; 
   };
 }
-
-// Add a new character to the character bar and display its details
 function addNewCharacter(event) {
   event.preventDefault();
   const nameInput = document.getElementById("name");
@@ -76,8 +72,6 @@ function addNewCharacter(event) {
     image: imageInput.value,
     votes: 0,
   };
-
-  // Add the new character to the server
   fetch(baseURL, {
     method: "POST",
     headers: {
@@ -87,18 +81,14 @@ function addNewCharacter(event) {
   })
     .then((response) => response.json())
     .then((character) => {
-      addCharacterToBar(character); // Add to the character bar
-      displayCharacterDetails(character); // Display its details
-      nameInput.value = ""; // Clear the input fields
+      addCharacterToBar(character); 
+      displayCharacterDetails(character); 
+      nameInput.value = ""; 
       imageInput.value = "";
     });
 }
-
-// Initialize the app
 function initializeApp() {
   fetchAndDisplayCharacters();
-
-  // Attach event listener to the new character form
   const newCharacterForm = document.getElementById("character-form");
   newCharacterForm.onsubmit = addNewCharacter;
 }
