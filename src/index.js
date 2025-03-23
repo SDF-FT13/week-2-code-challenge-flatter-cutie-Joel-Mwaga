@@ -1,67 +1,52 @@
-// Base URL for the API
 const baseURL = "http://localhost:3000/characters";
-
-// Fetch all characters and display them in the character bar
 function fetchAndDisplayCharacters() {
   fetch(baseURL)
     .then((response) => response.json())
     .then((characters) => {
       const characterBar = document.getElementById("character-bar");
-      characterBar.innerHTML = ""; // Clear the bar before adding characters
+      characterBar.innerHTML = ""; 
       characters.forEach((character) => {
         addCharacterToBar(character);
       });
     });
 }
-
-// Add a character to the character bar with a remove button
 function addCharacterToBar(character) {
   const characterBar = document.getElementById("character-bar");
   const span = document.createElement("span");
   span.textContent = character.name;
-
-  // Add a remove button
   const removeButton = document.createElement("button");
   removeButton.textContent = "❌";
   removeButton.style.marginLeft = "10px";
   removeButton.addEventListener("click", (event) => {
-    event.stopPropagation(); // Prevent triggering the click event on the span
+    event.stopPropagation(); 
     removeCharacter(character.id, span);
   });
-
-  // Append the span and remove button to the character bar
   span.addEventListener("click", () => displayCharacterDetails(character));
   span.appendChild(removeButton);
   characterBar.appendChild(span);
 }
-
-// Remove a character from the server and the character bar
 function removeCharacter(characterId, characterElement) {
   fetch(`${baseURL}/${characterId}`, {
     method: "DELETE",
   })
     .then((response) => {
       if (response.ok) {
-        characterElement.remove(); // Remove the character from the bar
+        characterElement.remove(); 
       } else {
         console.error("Failed to delete character");
       }
     })
     .catch((error) => console.error("Error:", error));
 }
-
-// Display character details in the detailed-info section
 function displayCharacterDetails(character) {
   const nameElement = document.getElementById("name");
   const imageElement = document.getElementById("image");
   const voteCountElement = document.getElementById("vote-count");
-
   nameElement.textContent = character.name;
   imageElement.src = character.image;
   imageElement.alt = character.name;
   voteCountElement.textContent = character.votes;
 
-  // Attach event listener to the votes form
   const votesForm = document.getElementById("votes-form");
   votesForm.onsubmit = (event) => {
     event.preventDefault();
