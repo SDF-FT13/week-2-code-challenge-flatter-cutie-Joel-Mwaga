@@ -4,7 +4,6 @@ function fetchAndDisplayCharacters() {//fetches the characters
     .then((response) => response.json())
     .then((characters) => {
       const characterBar = document.getElementById("character-bar");
-      characterBar.innerHTML = ""; 
       characters.forEach((character) => {
         addCharacterToBar(character);
       });
